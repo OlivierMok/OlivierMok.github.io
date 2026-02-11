@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!-- meta tags and title -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Measuring Units</title>
+
+	<!-- external and internal CSS -->
+	<link rel="stylesheet" href="styles.css" media="all">
+	<style>
+		/* in-file CSS here */
+	</style>
+
+
+</head>
+<body>
+
+	<h1>Code Log 2: CSS Measuring Units</h1>
+    <h2>Difference between absolute and relative CSS length units.</h2>
+    <p>Absolute CSS length units specify a fixed size that doesn’t change based on any other element or settings. They are tied to real-world measurements (like inches or points) or a fixed pixel value, so 1px is always 1px, 1cm is always 1cm, etc., regardless of screen size, font settings, or parent elements.
+        <br>Relative CSS length units define a size in relation to something else, such as the font size of the element or its parent, the root element, or the viewport dimensions. This means the actual computed size can change depending on context (e.g., screen size, inherited font size), making them flexible and better for responsive or scalable designs.
+        <br></p>
+    <ul>
+        <li>px, pt</li>
+        <p>px is the most common absolute unit in web design and represents a single CSS pixel.
+            It provides a fixed size that stays consistent regardless of font settings, parent elements, or viewport changes, making it very predictable.
+            On a standard 96 DPI screen, 96px equals 1 inch, but on high-resolution (retina) displays, 1 CSS pixel may map to multiple physical pixels for sharpness.
+            It is widely used for borders, shadows, small spacing, icons, and when you need exact pixel-perfect control, though it doesn’t scale with user zoom or font-size preferences, which can affect accessibility.<br>
+            pt is a traditional typography unit where 1pt = 1/72 of an inch.
+            It is also an absolute unit, meaning its size is fixed and does not change based on context like screen size or inherited styles.
+            In web design, 1pt is approximately 1.333px on a standard 96 DPI screen (since 96 ÷ 72 ≈ 1.333).
+            It is mostly used in print stylesheets (@media print) to match real-world printed measurements, but it is rarely used for screen-based web design today because it doesn’t adapt well to zoom or different device resolutions.</p>
+        <li>%</li>
+        <p>% is a relative unit that expresses a length as a percentage of a reference value, and what it is relative to depends on the CSS property being used.
+            For width, margin-left/right, and padding-left/right, it is relative to the parent element’s width; for height and vertical margins/padding, it refers to the parent’s height (but only if the parent has an explicit height set).
+            For font-size, % is relative to the parent element’s font-size.
+            This makes percentages ideal for creating fluid, responsive layouts where elements automatically scale proportionally to their container, such as width: 50% to make an element half the width of its parent or flexible grid systems.</p>
+        <li>in, pc</li>
+        <p>in is an absolute unit that represents 1 physical inch (exactly 2.54 cm).
+            Its size is fixed and tied to real-world measurements, independent of screen resolution, font size, or any other context.
+            In CSS, 1in is defined as equal to 96px (on the standard reference), 72pt, or 6pc, but on screens the actual displayed size can vary depending on the device’s pixel density.
+            It is primarily used in print stylesheets to set exact physical dimensions on paper (e.g., page margins or width), and is almost never used for screen-based web design because it appears inconsistently across devices.<br>
+            pc is another absolute, print-based unit where 1pc = 1/6 inch = 12 points.
+            Like in, it has a fixed physical size and does not scale with any other factors.
+            In terms of screen approximation, 1pc ≈ 16px on a standard 96 DPI display (since 96 ÷ 6 = 16).
+            It originates from traditional typesetting and is occasionally used in print stylesheets or legacy print workflows, but it has almost no practical use in modern screen-based web development due to its lack of flexibility and poor cross-device consistency.</p>
+    </ul>
+
+</body>
+</html>
+
