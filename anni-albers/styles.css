@@ -1,79 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-main {
-    width: 80%;
+body {
+    font-family: Times, serif;
+    color: black;
+    background: white;
+    line-height: 1.6;
+    font-size: 1.125rem; /* ≈18px */
     max-width: 1100px;
     margin: 0 auto;
+    padding: 4rem 2rem 6rem;
 }
 
 h1 {
     font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     font-style: italic;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 p {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
-    width: 50%;
+    margin-bottom: 1.6rem;
 }
 
-p.callout {
-    font-size: 2rem;
-    line-height: 2.2rem;
+.callout {
+    font-size: 2.1rem;
+    line-height: 1.4;
     font-style: italic;
+    font-weight: bold;
+    margin: 2.5rem 0;
+}
+
+/* About the Author – shared */
+#about-author {
+    margin-top: 5rem;
+    padding-top: 2rem;
+}
+
+#about-author h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ──────────────────────────────────────────────
+   Layout 1: index.html – Floats + percentage margins (6-col implied)
+──────────────────────────────────────────────── */
+
+#titleRow {
+    margin-bottom: 3rem;
+}
+
+/* Callout floated right, taking ~3 columns worth of space */
+p.callout {
     float: right;
+    width: 48%;               /* roughly 3/6 columns */
+    margin: 0 0 1.5rem 2rem;
+    padding-left: 1.5rem;
     text-align: right;
-    padding-left: 2em;
-    margin-top: 0;
+    clear: right;             /* prevents overlap issues */
 }
 
+/* Stagger paragraphs to show 6-column rhythm */
 #row1 p,
-#row3 p {
-    margin-left: calc(100% * 1 / 6);
+#row3 p,
+#row5 p,
+#row7 p,
+#row9 p,
+#row11 p {
+    margin-left: 16.66%;      /* 1/6 of width */
+    width: 66.66%;            /* spans ~4 columns */
 }
 
-#row4 p {
-    margin-left: calc(100% * 2 / 6);
+#row2 p:not(.callout),
+#row4 p,
+#row6 p,
+#row8 p,
+#row10 p {
+    margin-left: 33.33%;      /* 2/6 offset */
+    width: 66.66%;
 }
 
+/* Clear floats after sections with callouts */
+#row2::after,
+#row6::after,
+#row8::after,
+#row10::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
-/* *************************************************** */
-/* CSS for index2                                      */
-/* *************************************************** */
+/* ──────────────────────────────────────────────
+   Layout 2: index2.html – CSS Grid (explicit 6 columns)
+──────────────────────────────────────────────── */
 
-/* inherit the baseline main code, above, and add to it */
 #secondLayout main {
     display: grid;
-    grid-template-columns: repeat(6, calc(100% / 6) );
-    grid-template-rows: 100vh repeat(4, auto);
-    grid-template-areas:
-        'title title title title title title'
-        '. p1 p1 p1 . .'
-        'p2 p2 p2 c1 c1 c1'
-        '. p3 p3 p3 . .'
-        '. . p4 p4 p4 .';
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.8rem 2rem;          /* column-gap makes grid obvious */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* assigning grid area names to DOM elements */
-#secondLayout #titleRow { grid-area: title; }
-#secondLayout #para1 { grid-area: p1; }
-#secondLayout #para2 { grid-area: p2; }
-#secondLayout #para3 { grid-area: p3; }
-#secondLayout #para4 { grid-area: p4; }
-#secondLayout #callout1 { grid-area: c1; }
-
-/* override the baseline p styles from above */
-#secondLayout p {
-    width: 100%;
+#secondLayout #titleRow {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
 }
 
-#secondLayout #callout1 {
-    padding-left: 0;
+#secondLayout .callout {
+    grid-column: 2 / -2;       /* spans 4 columns, centered feel */
+    text-align: center;
+    margin: 3rem 0;
 }
 
-#secondLayout section h1 {
-    padding-top: 70vh;
+#secondLayout p:not(.callout) {
+    grid-column: span 3;       /* normal paragraphs take 3 columns */
+}
+
+/* Stagger some paragraphs to reinforce the grid */
+#secondLayout p:nth-of-type(4n+1),
+#secondLayout p:nth-of-type(4n+2) {
+    grid-column: 1 / 4;
+}
+
+#secondLayout p:nth-of-type(4n+3),
+#secondLayout p:nth-of-type(4n) {
+    grid-column: 4 / 7;
+}
+
+#secondLayout #about-author {
+    grid-column: 1 / -1;
+    margin-top: 4rem;
 }
