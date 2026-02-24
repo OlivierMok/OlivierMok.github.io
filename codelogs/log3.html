@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!-- meta tags and title -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS Media Queries</title>
+
+	<!-- external and internal CSS -->
+	<link rel="stylesheet" href="styles.css" media="all">
+	<style>
+		/* in-file CSS here */
+	</style>
+
+
+</head>
+<body>
+
+	<h1>Code Log 3: CSS Media Queries</h1>
+    <h2>1. How does a CSS media query work, and why is it useful?</h2>
+  <p>A CSS media query is a conditional rule that applies different styles based on the characteristics of the user's device or browser environment. It uses the <code>@media</code> rule, followed by a media type (e.g., screen, print) and/or media features (conditions like screen width), and then a block of CSS rules that only activate when the condition is true. For example: <code>@media (max-width: 768px) { body { font-size: 16px; } }</code>. This means the styles inside only apply when the viewport is 768px wide or narrower. Media queries are essential for <strong>responsive web design</strong> — they allow a single website to adapt its layout, typography, and behavior to phones, tablets, laptops, and desktops without needing separate mobile versions. This improves usability, accessibility, and performance across all devices.</p>
+
+  <h2>2. What "media features" are supported by media queries? Pick any 4 to explain.</h2>
+  <p>CSS media queries support many media features that describe the device or viewport. Here are four commonly used ones:</p>
+  <ul>
+    <li><strong>max-width / min-width</strong>: Checks the viewport width. <code>max-width: 768px</code> targets screens narrower than or equal to 768px (typical for tablets and phones); <code>min-width: 1024px</code> targets larger screens (desktops).</li>
+    <li><strong>orientation</strong>: Detects whether the device is in portrait (<code>orientation: portrait</code>) or landscape (<code>orientation: landscape</code>) mode. Useful for adjusting layouts when a phone is rotated.</li>
+    <li><strong>prefers-color-scheme</strong>: Detects the user's system preference for light or dark mode. <code>prefers-color-scheme: dark</code> lets you apply dark theme styles automatically if the user has enabled dark mode on their device.</li>
+    <li><strong>hover</strong>: Checks if the primary input device can hover (e.g., mouse) or not (e.g., touch). <code>hover: hover</code> applies hover effects only on devices with a mouse; <code>hover: none</code> can hide or replace hover states on touch devices.</li>
+  </ul>
+
+</body>
+</html>
+
