@@ -58,6 +58,8 @@ header {
 
 .info {
         font-size: 1.15rem;
+        background-color: greenyellow;
+        color: aliceblue;
 }
 
 .info h2 {
