@@ -58,7 +58,6 @@ header {
 
 .info {
         font-size: 1.15rem;
-        background-color: greenyellow;
 }
 
 .info h2 {
@@ -72,4 +71,8 @@ header {
 
 .info li {
         margin-bottom: 0.6rem;
+}
+
+main {
+        background-color: greenyellow;
 }
