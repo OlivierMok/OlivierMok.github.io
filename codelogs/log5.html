@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!-- meta tags and title -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Images</title>
+
+	<!-- external and internal CSS -->
+	<link rel="stylesheet" href="styles.css" media="all">
+	<style>
+		/* in-file CSS here */
+	</style>
+
+
+</head>
+<body>
+
+	<h1>Code Log 5: Images</h1>
+    <h2>1. What are the differences between presenting an image using an HTML tag (like &lt;img&gt;) and presenting it as the background of an HTML element (using the CSS property background-image)?</h2>
+    <p>In HTML, images are typically presented using the <code>&lt;img&gt;</code> tag, which embeds the image directly as inline or block content within the document flow. The code looks like <code>&lt;img src="image-url" alt="description"&gt;</code>, and it allows for attributes like <code>width</code>, <code>height</code>, and <code>alt</code> for accessibility. Functionally, <code>&lt;img&gt;</code> is semantic, meaning it's treated as content (e.g., screen readers announce it), and it can be resized or styled but always occupies space in the layout. For example:</p>
+
+<grok-card data-id="0a9d29" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="SMALL" ></grok-card>
+
+    <p>In contrast, presenting an image as a CSS <code>background-image</code> applies it to the background of an element (e.g., <code>div</code>) via <code>background-image: url('image-url');</code>. This is non-semantic—it's decorative, not content—so screen readers ignore it, and it's ideal for overlays or repeated patterns. Layout-wise, backgrounds don't take up space like <code>&lt;img&gt;</code>; they fill the element's box and can be positioned, sized, or repeated with additional properties. For example:</p>
+    <div class="example-bg"></div>
+    <p>Overall, <code>&lt;img&gt;</code> is better for essential content (e.g., photos in articles), while <code>background-image</code> suits styling (e.g., hero banners).</p>
+
+    <h2>2. Besides background-image, what other CSS properties affect the display of background images? Describe at least two more CSS properties.</h2>
+    <p>Besides <code>background-image</code>, several CSS properties control how background images are displayed. Two key ones are:</p>
+    <ul>
+        <li><strong>background-size</strong>: This sets the size of the background image relative to its container. Values like <code>cover</code> scale the image to fill the element while maintaining aspect ratio (cropping if needed), <code>contain</code> fits the entire image inside without cropping, or specific dimensions like <code>100px 200px</code>. It's useful for responsive designs.</li>
+        <li><strong>background-position</strong>: This positions the background image within its element. Values like <code>center</code>, <code>top left</code>, or percentages (e.g., <code>50% 0%</code>) control alignment, making it ideal for focal points or parallax effects.</li>
+    </ul>
+
+    <h2>3. In one sentence, how would you define the differences between dimensions and resolution in a bitmap image?</h2>
+    <p>Dimensions refer to the width and height of an image in pixels (e.g., 1920x1080), defining its size on screen, while resolution is the density of pixels per inch (PPI/DPI), determining sharpness and quality when printed or viewed at actual size.</p>
+
+    <h2>4. Extra Credit: Similarities and differences between image file formats (GIF, PNG, JPG/JPEG, WebP, SVG)</h2>
+    <p>All these formats store visual data for web use, but they differ in compression, transparency, animation, and scalability. Similarities include wide browser support and raster/vector capabilities for images.</p>
+    <ul>
+        <li><strong>GIF</strong>: Lossless compression, supports animation and transparency (but only 256 colors); best for simple graphics/animations like memes, but large files and limited colors make it poor for photos.</li>
+        <li><strong>PNG</strong>: Lossless, supports transparency and high colors; ideal for logos/icons with sharp edges, but files are larger than lossy formats, making it suboptimal for photos.</li>
+        <li><strong>JPG/JPEG</strong>: Lossy compression, no transparency; excellent for photos with small file sizes and good quality, but artifacts appear on repeated saves, unsuitable for text/graphics.</li>
+        <li><strong>WebP</strong>: Lossy/lossless, supports transparency/animation; combines JPEG quality with PNG features at smaller sizes, great for web performance, but older browsers may need fallbacks.</li>
+        <li><strong>SVG</strong>: Vector-based (XML), scalable without quality loss, supports animation/transparency; perfect for logos/icons that resize, but not for complex photos (rasterize to bitmap for those).</li>
+    </ul>
+</body>
+</html>
+
