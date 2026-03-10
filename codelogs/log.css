@@ -1,0 +1,47 @@
+body {
+            font-family: Times, serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            color: #000;
+            background: #fff;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+        }
+        ul {
+            margin: 0 0 1.5rem 1.5rem;
+        }
+        li {
+            margin-bottom: 0.8rem;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+        }
+        .example-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+        }
+        .example-bg {
+            width: 300px;
+            height: 200px;
+            background-image: url('https://i0.wp.com/css-tricks.com/wp-content/uploads/2018/06/square.png?ssl=1');
+            background-size: cover;
+            background-position: center;
+            margin: 1rem auto;
+            border: 1px dashed #ccc; /* dashed border for demo visibility only */
+        }
