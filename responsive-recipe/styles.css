@@ -65,7 +65,7 @@
             gap: 3rem;
             }
         .img {
-            width: 50%; /* Scale from 30% to 90% (3x increase) */
+            width: 40%; /* Scale from 30% to 90% (3x increase) */
             height: auto;
             margin: 0 auto; /* Centers the enlarged image */
             }
@@ -74,12 +74,12 @@
             }
         }
 
-        @media (max-width: 600px) {
+        @media (min-width: 600px) {
             .recipe-header {
                 gap: 3rem;
             }
             .img {
-                width: 30%;
+                width: 70%;
                 height: auto;
             }
             .meta-info {
