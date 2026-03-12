@@ -64,8 +64,8 @@
                 gap: 3rem;
             }
             .img {
-                width: 750px; /* Enlarged 3x from original 250px */
-                height: 600px; /* Enlarged 3x from original 200px */
+                width: 70%;
+                height: auto;
             }
             .meta-info {
                 margin-top: 0; /* Align to top of image area */
@@ -80,8 +80,8 @@
                 gap: 3rem;
             }
             .img {
-                width: 250px; /* Enlarged 3x from original 250px */
-                height: 200px; /* Enlarged 3x from original 200px */
+                width: 30%;
+                height: auto;
             }
             .meta-info {
                 margin-top: 0; /* Align to top of image area */
