@@ -74,19 +74,3 @@
                 font-size: 1.1rem;
             }
         }
-
-        @media (min-width: 600px) {
-            .recipe-header {
-                gap: 3rem;
-            }
-            .img {
-                width: 30%;
-                height: auto;
-            }
-            .meta-info {
-                margin-top: 0; /* Align to top of image area */
-            }
-            .description {
-                font-size: 1.1rem;
-            }
-        }
