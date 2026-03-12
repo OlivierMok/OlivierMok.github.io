@@ -58,3 +58,35 @@
         li {
             margin-bottom: 0.6rem;
         }
+
+        @media (min-width: 992px) {
+            .recipe-header {
+                gap: 3rem;
+            }
+            .img {
+                width: 750px; /* Enlarged 3x from original 250px */
+                height: 600px; /* Enlarged 3x from original 200px */
+            }
+            .meta-info {
+                margin-top: 0; /* Align to top of image area */
+            }
+            .description {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .recipe-header {
+                gap: 3rem;
+            }
+            .img {
+                width: 250px; /* Enlarged 3x from original 250px */
+                height: 200px; /* Enlarged 3x from original 200px */
+            }
+            .meta-info {
+                margin-top: 0; /* Align to top of image area */
+            }
+            .description {
+                font-size: 1.1rem;
+            }
+        }
