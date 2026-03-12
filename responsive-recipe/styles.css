@@ -65,7 +65,7 @@
             gap: 3rem;
             }
         .img {
-            width: 90%; /* Scale from 30% to 90% (3x increase) */
+            width: 70%; /* Scale from 30% to 90% (3x increase) */
             height: auto;
             margin: 0 auto; /* Centers the enlarged image */
             }
