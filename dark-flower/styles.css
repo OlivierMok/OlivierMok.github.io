@@ -79,7 +79,10 @@ body.darkMode {
     color: white;
 }
 
-header.darkMode {
+.darkMode #RhododendronTitle {
     background-color: #080808;
-    color: rgb(255, 255, 255);
+}
+
+.darkMode #RhododendronTitle h1 {
+    color: white;
 }
