@@ -74,6 +74,11 @@ header {
         margin-bottom: 0.6rem;
 }
 
-main {
-        
+body.darkMode {
+    background-color: rgb(27, 1, 21);
+    color: white;
+}
+
+body.darkMode h1 {
+    color: rgb(207, 68, 68);
 }
