@@ -56,7 +56,7 @@ header {
     }
 }
 
-.info {
+body {
         font-size: 1.15rem;
         background-color: lightgreen;
 }
@@ -79,6 +79,7 @@ body.darkMode {
     color: white;
 }
 
-body.darkMode h1 {
-    color: rgb(207, 68, 68);
+header.darkMode {
+    background-color: #080808;
+    color: rgb(255, 255, 255);
 }
