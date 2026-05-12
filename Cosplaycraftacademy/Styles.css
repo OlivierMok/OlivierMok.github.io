@@ -1,101 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fredoka:wght@400;600&display=swap');
+/* =============================================
+   COSPLAY CRAFT ACADEMY - Cute Pink Theme
+   Light pink background + Comic Sans MS
+   ============================================= */
 
-:root {
-    --pink-light: #FFE4F3;
-    --pink: #FF69B4;
-    --hot-pink: #FF1493;
-    --purple: #C26EFF;
-    --dark: #2C2C2C;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Fredoka', 'Poppins', sans-serif;
-    background-color: var(--pink-light);
-    color: var(--dark);
-    margin: 0;
-    line-height: 1.6;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: #ffe6f2;     /* soft light pink */
+    color: #333;
+    line-height: 1.7;
+    font-size: 18px;
 }
 
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    color: var(--hot-pink);
-}
-
-/* Navigation */
-header {
-    background: linear-gradient(135deg, var(--hot-pink), var(--purple));
+.page-header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: #ff99cc;
     color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.3);
+    border-bottom: 10px solid #ff66aa;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+h1 {
+    font-size: 3.8rem;
+    margin-bottom: 0.3rem;
+    text-shadow: 3px 3px 0px #ff66aa;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    opacity: 0.95;
+}
+
+/* Main container */
+.guide-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Sections */
+.miku-section,
+section {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 15px rgba(255, 153, 204, 0.2);
+    border: 4px solid #ff99cc;
+}
+
+/* Headings */
+h2 {
+    font-size: 2.4rem;
+    color: #ff3399;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: #ff6699;
+    margin: 1.5rem 0 0.6rem;
+}
+
+/* Paragraphs and lists */
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.6rem;
+}
+
+/* Note box */
+.note-box {
+    background: #ffccdd;
+    border: 5px dashed #ff6699;
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 2rem 0;
+}
+
+/* Links */
+a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: underline wavy #ff99cc;
+}
+
+a:hover {
+    color: #ff3399;
+}
+
+/* Images and videos */
+img, video {
+    max-width: 100%;
+    border-radius: 15px;
+    margin: 1rem 0;
+    border: 6px solid #ff99cc;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Character guides section on index */
+.char-guides {
+    text-align: center;
+}
+
+.char-guides img {
+    width: 280px;
+    margin: 1rem;
+    border: 8px solid #ff99cc;
+}
+
+.miku, .power {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1rem 2rem;
+    max-width: 300px;
+}
+
+/* Opening / Hero */
+.opening {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Guide list */
+.guide-list {
     list-style: none;
     padding: 0;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: 0.3s;
+.guide-list li {
+    margin: 1rem 0;
+    font-size: 1.4rem;
 }
 
-nav a:hover {
-    color: #fff;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-}
-
-/* Hero & Cards */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url('images/hero-cosplay.jpg');
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding: 4rem 1rem;
-}
-
-.card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
-    transition: all 0.4s;
-}
-
-.card:hover {
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0 15px 30px rgba(255, 20, 147, 0.3);
-}
-
-.card h3 {
-    color: var(--hot-pink);
-}
-
-/* Coming Soon Section */
-.coming-soon {
-    background: linear-gradient(#FFE4F3, #F8C1E6);
-    padding: 2.5rem;
-    text-align: center;
-    border-radius: 20px;
-    margin: 2rem;
-}
-
-/* Footer */
-footer {
-    background: var(--dark);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.95rem;
+/* Make it extra cute on mobile */
+@media (max-width: 768px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2rem; }
+    .guide-container { padding: 0 1rem; }
 }
