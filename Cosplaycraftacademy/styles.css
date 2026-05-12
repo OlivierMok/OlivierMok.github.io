@@ -166,22 +166,25 @@ img, video {
     font-size: 2.6rem;
 }
 
-.character-card img {
-    width: 260px;           /* good size */
-    height: auto;           /* ← prevents cropping */
-    max-height: 340px;      /* keeps it from getting too tall */
-    object-fit: contain;    /* ← shows the full image */
-    border: none;           /* ← removes the pink outline */
-    border-radius: 18px;
-    flex-shrink: 0;
+.character-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    border: 6px solid #ff99cc;
+    border-radius: 25px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 720px;
+    box-shadow: 0 10px 20px rgba(255, 153, 204, 0.25);
 }
 
 .character-card img {
     width: 260px;
     height: auto;
-    max-height: 340px;
-    object-fit: contain;     /* prevents cropping */
-    border: none;            /* removes the inner pink outline on the pictures */
+    max-height: 380px;      /* allows full body to show */
+    object-fit: contain;    /* prevents cropping */
+    border: none;           /* removes any inner pink outline on the picture */
     border-radius: 18px;
     flex-shrink: 0;
 }
@@ -194,11 +197,11 @@ img, video {
 .character-label h3 {
     font-size: 2.1rem;
     color: #ff3399;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
 }
 
 .character-label a {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     color: #0066cc;
     text-decoration: underline wavy #ff99cc;
     font-weight: bold;
@@ -218,10 +221,6 @@ img, video {
     }
    .character-card {
         flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-    }
-    .character-label {
         text-align: center;
     }
 }
