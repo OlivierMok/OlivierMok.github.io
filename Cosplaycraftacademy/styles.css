@@ -107,9 +107,11 @@ a:hover {
 
 /* Images and videos */
 img, video {
-    max-width: 100%;
+    max-width: 400px;           /* ← this is the new desktop limit */
+    width: 100%;
+    display: block;
+    margin: 1.5rem auto;        /* centers them nicely */
     border-radius: 15px;
-    margin: 1rem 0;
     border: 6px solid #ff99cc;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
@@ -149,9 +151,29 @@ img, video {
     font-size: 1.4rem;
 }
 
+.full-set-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem 0;
+}
+
+.full-set-images img {
+    max-width: 48%;           /* makes them sit nicely side-by-side */
+    flex: 1 1 400px;          /* allows them to grow but keeps good size */
+    border: 6px solid #ff99cc;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
 /* Make it extra cute on mobile */
 @media (max-width: 768px) {
     h1 { font-size: 2.8rem; }
     h2 { font-size: 2rem; }
     .guide-container { padding: 0 1rem; }
+    .full-set-images img {
+        max-width: 100%;
+    }
 }
