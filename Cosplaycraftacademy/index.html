@@ -4,68 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cosplay Craft Academy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="wig-styling.html">Wig Styling</a></li>
-                <li><a href="makeup.html">Makeup</a></li>
-                <li><a href="makeupkit.html">Makeup Kits</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="challenges.html">Challenges</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
+    <header class="page-header">
+        <h1>✨ Cosplay Craft Academy ✨</h1>
+        <p class="subtitle">Beginner-friendly cosplay tutorials, tips & resources</p>
     </header>
 
-    <section class="hero">
-        <h1>Cosplay Craft Academy</h1>
-        <p>Learn to create stunning cosplays with clear, step-by-step tutorials</p>
-    </section>
+    <main class="guide-container">
 
-    <section class="featured">
-        <h2 style="text-align:center; margin-bottom: 2rem;">Featured Characters</h2>
-        <div class="cards">
+        <!-- HERO / WELCOME -->
+        <section class="opening">
+            <h2>Welcome to Cosplay Craft Academy!</h2>
+            <p>Learn how to style wigs, do cute makeup, build your kit, and create your favorite characters — step by step, no experience needed!</p>
+        </section>
 
-            <!-- Miku Card -->
-            <div class="card">
+        <!-- FEATURED CHARACTER GUIDES -->
+            <section class="char-guides">
+                <h2>Featured Character Guides</h2>
                 <img src="28887-1-hatsune-miku-photo.png" alt="Hatsune Miku Cosplay">
-                <div class="card-content">
+                <div class="miku">
                     <h3>Hatsune Miku</h3>
-                    <p>Learn how to style her iconic twin tails, vibrant makeup, and full look.</p>
                     <a href="miku.html" style="color:#0066cc; font-weight:600;">→ Start Miku Guide</a>
                 </div>
-            </div>
-
             <!-- Power Card -->
-            <div class="card">
                 <img src="PowerCsm29.png" alt="Power Cosplay">
-                <div class="card-content">
+                <div class="power">
                     <h3>Power (Chainsaw Man)</h3>
-                    <p>Master her wild hair, sharp teeth, and dramatic makeup style.</p>
                     <a href="power.html" style="color:#0066cc; font-weight:600;">→ Start Power Guide</a>
                 </div>
-            </div>
+            </section>
 
+        <!-- ALL GUIDES & RESOURCES -->
+        <section>
+            <h2>Explore All Guides</h2>
+            <ul class="guide-list">
+                <li><a href="wig-styling.html">💇‍♀️ Wig Styling Guide</a></li>
+                <li><a href="makeup.html">💄 Makeup Tutorial</a></li>
+                <li><a href="makeupkit.html">🛍️ Essential Makeup Kit</a></li>
+                <li><a href="tools.html">🛠️ Cosplay Tools & Equipment</a></li>
+                <li><a href="convention-guide.html">🎟️ Convention Guide & Manners</a></li>
+                <li><a href="resources.html">🔗 Shopping Resources</a></li>
+                <li><a href="About.html">ℹ️ About the Academy</a></li>
+            </ul>
+        </section>
+
+        <!-- NOTE BOX -->
+        <div class="note-box">
+            <p><strong>💖 Start here:</strong> Pick a character guide or learn the basics with Wig Styling and Makeup Kit!</p>
         </div>
-    </section>
 
-    <section class="coming-soon">
-        <h2>Suggested / Coming Soon</h2>
-        <p><em>Want a specific character added? Let us know in the feedback form.</em></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Cosplay Craft Academy • Educational Cosplay Tutorials</p>
-        <p>All images used with permission or under fair use for educational purposes.</p>
-    </footer>
+    </main>
 
 </body>
 </html>
