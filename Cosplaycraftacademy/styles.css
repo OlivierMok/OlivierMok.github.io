@@ -169,19 +169,19 @@ img, video {
 .character-card {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     background: white;
     border: 6px solid #ff99cc;
     border-radius: 25px;
-    padding: 1.5rem;
+    padding: 1.8rem;
     margin: 2rem auto;
-    max-width: 700px;
-    box-shadow: 0 10px 20px rgba(255, 153, 204, 0.25);
+    max-width: 720px;
+    box-shadow: 0 10px 25px rgba(255, 153, 204, 0.3);
 }
 
 .character-card img {
-    width: 220px;
-    height: 220px;
+    width: 240px;
+    height: 240px;
     object-fit: cover;
     border-radius: 18px;
     border: 5px solid #ff66aa;
@@ -194,9 +194,9 @@ img, video {
 }
 
 .character-label h3 {
-    font-size: 2rem;
+    font-size: 2.1rem;
     color: #ff3399;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .character-label a {
@@ -221,7 +221,7 @@ img, video {
    .character-card {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     .character-label {
         text-align: center;
