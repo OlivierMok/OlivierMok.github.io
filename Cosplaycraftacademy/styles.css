@@ -121,19 +121,6 @@ img, video {
     text-align: center;
 }
 
-.char-guides img {
-    width: 280px;
-    margin: 1rem;
-    border: 8px solid #ff99cc;
-}
-
-.miku, .power {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 1rem 2rem;
-    max-width: 300px;
-}
-
 /* Opening / Hero */
 .opening {
     text-align: center;
@@ -170,12 +157,13 @@ img, video {
 
 .char-guides {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .char-guides h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     color: #ff3399;
+    font-size: 2.6rem;
 }
 
 .character-card {
